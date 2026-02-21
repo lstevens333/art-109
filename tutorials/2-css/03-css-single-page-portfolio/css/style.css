@@ -1,3 +1,21 @@
+/* ~~~~~~~~~~~~~~~ color palete */
+
+:root {
+--bg-color-1: #f0ece2;
+--bg-color-2: #dfd3c3;
+--font: #4b5f6a;
+--accent-1:#eba7b3;
+--accent-2:#684E32;
+--dark:#3e2e1c;
+}
+
+
+
+
+
+
+
+
 /* CSS resets */
 
 * {
@@ -8,31 +26,47 @@
 /* respect user font size preferences */
 html {
     font-size: 100%;
-
+    scroll-behavior: smooth;
 }
 
 /* General CSS */
 
 body {
-    background-color: #f4e7db;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.5rem;
+    background-color: var(--bg-color-1);
+    color: var(--font);
+    font-family: "Karla", sans-serif;
     line-height: 1.5;
+    text-align: justify;
+}
+
+@media (max-width: 700px){
+    body{
+        font-size: 1.3rem;
+    }
 }
 
 header {
     padding: 6rem;
     margin-bottom: 3rem;
-    background-color: #ecdfcc;
+    background-color: var(--bg-color-2);
     /* background: #f598e5; */
     /* background: radial-gradient(circle, rgba(245, 152, 229, 1) 0%, rgba(187, 98, 209, 1) 100%); */
-    color: #aa906d;
-    border-bottom: #e7c2e4 2px solid;
+    color: var(--accent-2);
+    border-bottom: #eba7b3 2px solid;
     /* text-align: center; */
 }
 
+@media (max-width: 650px){
+header{
+padding-left: 2rem;
+}
+}
 header h1 {
     font-size: 3rem;
+    /* text-decoration: underline;
+    text-decoration-style: wavy; */
+    font-family: "Montserrat", sans-serif;
+    text-decoration-color: var(--font);
 }
 
 nav{
@@ -44,14 +78,39 @@ nav{
 
 nav a {
     text-decoration: none;
-    color: #aa906d;
+    color: var(--accent-2);
     display: inline-block;
     margin: 0 1rem;
+    /* transition: background-color .5s ease; */
     
 }
 
-main {
+nav a:hover {
+    color: var(--font);
+    transform: scale(1.2);
+}
 
+@media (max-width: 650px){
+    nav a {
+        margin: 0 .5 rem;
+    }
+}
+
+main {
+    margin: 0;
+}
+
+@media (max-width: 850px) {
+    main{
+        margin: 2rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+main{
+    margin: 1rem;
+}
 }
 
 .about-section, .portfolio-section, .contact-section{
@@ -62,6 +121,7 @@ main {
 max-width: 50rem;
 margin: 0 auto;
 padding: 2rem 0;
+font-size: 1.3rem;
 }
 .about-content h2, .portfolio-content h2, .contact-content h2{
 margin: 2rem 0;
@@ -69,14 +129,14 @@ margin: 2rem 0;
 
 .portfolio-item{
     margin-bottom: 5rem;
-    background-color: #fff;
+    background-color: var(--bg-color-2);
     padding: 4rem;
-    text-align: justify;
+    /* text-align: justify; */
     /* border-style: solid;
     border-width: 13px;
     border-color: #aa906d #e7c2e4 #ecdfcc #f4e7db; */
     border-radius: .5rem;
-    box-shadow: 0px 4px 6px #c6bda3;
+    box-shadow: 0px 4px 6px var(--accent-2);
     /* border: 2px #c6bda3 solid; */
 }
 
@@ -87,6 +147,16 @@ margin: 2rem 0;
 .portfolio-item p {
         font-size: 1.2rem;
 }
+@media (max-width: 800px){
+    .portfolio-item{
+        padding: 3rem;
+    }
+}
+@media (max-width: 650px){
+    .portfolio-item{
+        padding: 2rem;
+    }
+}
 
 .portfolio-item img {
 max-width: 100%;
@@ -96,7 +166,7 @@ border-radius: .5rem;
 }
 
 .about-section{
-    background-color: #f3efef;
+    /* background-color: #dfd3c3; */
     padding: 1.5rem;
 }
 
@@ -104,9 +174,16 @@ border-radius: .5rem;
     /* background-color: beige; */
 }
 
+
+/* style classes */
+.accent-1{
+     color: var(--accent-2);
+}
+
+
 footer {
-background-color: #aa906d;
-color: #ecdfcc;
+background-color: var(--font);
+color: var(--bg-color-2);
 padding: 1rem;
 text-align: end;
 }
