@@ -1,0 +1,116 @@
+body {
+    animation: change-color 4s infinite alternate;
+    /* background-color: antiquewhite; */
+}
+
+@keyframes change-color {
+    0% {
+        background-color: antiquewhite;
+    }
+
+    50% {
+        background-color: #884326;
+    }
+
+    100% {
+        background-color: #712323;
+    }
+}
+
+.title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 80px auto;
+    animation: skew 3s infinite alternate;
+}
+
+@keyframes skew {
+    0% {
+        transform: skew(0deg, 0deg);
+    }
+
+    100% {
+        transform: skew(30deg, 20deg);
+    }
+}
+
+.square {
+    background-color: aquamarine;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 50px auto;
+    transition: all 1s;
+}
+
+.square2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: antiquewhite;
+  position: absolute;
+  
+  animation-name: box;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.square:hover {
+    background-color: aqua;
+    transform: rotate(30deg);
+}
+
+.button-div {
+    text-align: center;
+}
+
+.button {
+    color: white;
+    background-color: rgb(169, 97, 191);
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .5s;
+    /* margin: 50px auto;
+    display: block;
+    width: 100px;
+    text-align: center; */
+}
+
+.button:hover {
+    background-color: rgb(214, 148, 214);
+    color: rgb(248, 237, 221);
+    transform: scale(1.5);
+}
+
+.loading {
+    background-color: rgb(243, 239, 230);
+    animation: stretch 5s infinite alternate;
+}
+
+:focus {
+ background-color: rgb(199, 186, 145);
+  width: 250px;
+}
+
+
+
+
+@keyframes stretch {
+    0% {
+        width: 100px;
+    }
+
+    100% {
+        width: 100vw;
+    }
+}
+
+@keyframes box {
+  0%   {background-color:antiquewhite; left:0px; top:0px;}
+  25%  {background-color:#884326; left:200px; top:0px;}
+  50%  {background-color:#712323; left:200px; top:200px;}
+  75%  {background-color:#884326; left:0px; top:200px;}
+  100% {background-color:#712323; left:0px; top:0px;}
+}
